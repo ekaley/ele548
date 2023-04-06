@@ -1,25 +1,39 @@
+CXX := g++
+CXXFLAGS :=-march=rv64g
+CXX_RISCV :=riscv64-unknown-elf-g++
+OBJDUMP_RISCV :=riscv64-unknown-elf-objdump
+OBJDUMP_FLAGS :=-d -M numeric,no-aliases
+OUT_DIR := out
 
-build:
-	go build
+# srcfiles := $(shell find . -maxdepth 3 -name "*.cpp")
+SRC_FILES := $(shell find . -maxdepth 3 -name "*.cpp")
+# objects  := $(patsubst %.cpp, %.o, $(srcfiles))
+OBJ_FILES := $(notdir $(patsubst %.cpp, %.o, $(SRC_FILES)))
+ASM_FILES := $(notdir $(patsubst %.cpp, %.s, $(SRC_FILES)))
 
-test:
-	echo $(SRC)
+all: $(OBJ_FILES)
 
-CC=gcc
-CXX=g++
-RM=rm -rf
-LDFLAGS=-S
+$(OUT_DIR):
+	mkdir -p $(OUT_DIR)
+
+$(OBJ_FILES): $(SRC_FILES) | $(OUT_DIR)
+	$(CXX_RISCV) $(CXXFLAGS) -c $^ && mv *.o $(OUT_DIR)/
+
+.PHONY: asm
+asm:
 
 
-SRCS=$(notdir src)
-ASMS=$(subst .cpp,.s,$(SRCS))
-
-all: generate-asm
-
-generate-asm: $(SRCS)
-	echo $(SRCS)
-#	$(CXX) $(LDFLAGS) -o src/asm/$(ASMS) src/$(SRCS)
-	$(CXX) $(LDFLAGS) -o $@ $^
-
+.PHONY: clean
 clean:
-	$(RM) src/asm/$(ASMS)
+	rm -rf $(OUT_DIR)
+
+.PHONY: docker-build
+docker-build:
+	docker build -f Dockerfile . -t asm-compiler:latest
+
+.PHONY: docker-run
+docker-run:
+	docker run --platform=linux/amd64 -it asm-compiler /bin/bash
+
+
+
