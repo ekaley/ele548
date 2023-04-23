@@ -1,0 +1,2 @@
+jalr,blt,beq,lw,or,lui,auipc,srli,slli,sub,jal,addi,add,bne,sw
+35,6,6,87,3,31,30,10,15,3,12,121,10,2,61

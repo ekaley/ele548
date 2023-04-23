@@ -1,12 +1,13 @@
 CXX := g++
-CXXFLAGS :=-march=rv64g
+CXXFLAGS :=-march=rv32i -mabi=ilp32
+CXXFLAGSXX :=-march=rv64g
 CXX_RISCV :=riscv64-unknown-elf-g++
 OBJDUMP_RISCV :=riscv64-unknown-elf-objdump
 OBJDUMP_FLAGS :=-d -M numeric,no-aliases
 OUT_DIR := out
 
 # srcfiles := $(shell find . -maxdepth 3 -name "*.cpp")
-SRC_FILES := $(shell find . -maxdepth 3 -name "*.cpp")
+SRC_FILES := $(shell find src/ -maxdepth 3 -name "*.cpp")
 # objects  := $(patsubst %.cpp, %.o, $(srcfiles))
 OBJ_FILES := $(notdir $(patsubst %.cpp, %.o, $(SRC_FILES)))
 ASM_FILES := $(notdir $(patsubst %.cpp, %.s, $(SRC_FILES)))
@@ -33,7 +34,7 @@ docker-build:
 
 .PHONY: docker-run
 docker-run:
-	docker run --platform=linux/amd64 -it asm-compiler /bin/bash
+	docker run -v `pwd`:/ele548 --platform=linux/amd64 -it asm-compiler /bin/bash
 
 
 

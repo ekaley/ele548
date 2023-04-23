@@ -1,14 +1,3 @@
-*
-*Smart Water Tank Pump Switcher
-        *An Arduino-Based Project
-*Designed by T.K.Hareendran
-        *Tested @ TechNode PROTOLABZ
-*IDE:Arduino 0022 / Board:Arduino UNO-R3 / Chip: ATmega328P-PU
-        *Date:November 14,2014
-*/
-
-#include <EEPROM.h>
-
 #define inputLevel1 4 //Tank Level-Low
 
 #define inputLevel2 7 //Tank Level-High

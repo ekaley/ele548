@@ -18,7 +18,7 @@ import (
 func main() {
 	// open file for reading
 	// read line by line
-	lines, err := readLines("out/test.o.s")
+	lines, err := readLines("asm/test_64.o.s")
 	if err != nil {
 		log.Fatalf("readLines: %s", err)
 	}
@@ -100,7 +100,7 @@ func csvWriter(instructions map[string]int) error {
 	}
 	vals = append(vals, instrs, instrFreq)
 
-	f, err := os.Create("dater.csv")
+	f, err := os.Create("test_64g.csv")
 	if err != nil {
 		return err
 	}

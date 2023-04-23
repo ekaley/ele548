@@ -9,7 +9,6 @@
 
 #include <string>
 #include <time.h>
-#include <wiringPi.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -33,7 +32,7 @@ bool isSync(unsigned int idx) {
     unsigned long t0 = timings[(idx + RING_BUFFER_SIZE - 1) % RING_BUFFER_SIZE];
     unsigned long t1 = timings[idx];
 
-    if ((t0 > (SEP_LENGTH - 100)) && (t0 < (SEP_LENGTH + 100)) && (t1 > (SYNC_LENGTH - 1000)) && (t1 < (SYNC_LENGTH + 1000)) && (digitalRead(DATA_PIN) == HIGH)) {
+    if ((t0 > (SEP_LENGTH - 100)) && (t0 < (SEP_LENGTH + 100)) && (t1 > (SYNC_LENGTH - 1000)) && (t1 < (SYNC_LENGTH + 1000))) {
         return true;
     }
 
