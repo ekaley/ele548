@@ -96,7 +96,7 @@ func csvWriter(instructions map[string]int) error {
 	instrFreq := []string{}
 	for k, v := range instructions {
 		instrs = append(instrs, k)
-		instrFreq = append(instrFreq, fmt.Sprintf("%x", v))
+		instrFreq = append(instrFreq, fmt.Sprintf("%d", v))
 	}
 	vals = append(vals, instrs, instrFreq)
 
