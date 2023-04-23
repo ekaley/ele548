@@ -2,6 +2,8 @@ package main
 
 import (
 	"bufio"
+	"encoding/csv"
+	"fmt"
 	"log"
 	"os"
 	"strings"
@@ -28,6 +30,12 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	
+	err = csvWriter(instr)
+	if err != nil {
+		panic(err)
+	}
+
 	err = plotting(instr)
 	if err != nil {
 		panic(err)
@@ -76,6 +84,29 @@ func parseInstructions(lines []string) (map[string]int, error) {
 	log.Printf("instructions %+v\n", instructions)
 
 	return instructions, nil
+}
+
+func csvWriter(instructions map[string]int) error {
+	// vals := [][]string{
+	// 	{"addi", "xor", "slli"},
+	// 	{"5", "114", "34"},
+	// }
+	vals := [][]string{}
+	instrs := []string{}
+	instrFreq := []string{}
+	for k, v := range instructions {
+		instrs = append(instrs, k)
+		instrFreq = append(instrFreq, fmt.Sprintf("%x", v))
+	}
+	vals = append(vals, instrs, instrFreq)
+
+	f, err := os.Create("dater.csv")
+	if err != nil {
+		return err
+	}
+
+	w := csv.NewWriter(f)
+	return w.WriteAll(vals)
 }
 
 func plotting(instructions map[string]int) error {

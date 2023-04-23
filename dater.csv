@@ -1,0 +1,2 @@
+andi,bge,ld,jalr,lui,bne,remw,addi,jal,bgeu,addiw,addw,sltiu,sw,auipc,xori,slliw,blt,divw,sd,lw,lbu,beq
+2,3,11,1f,16,4,2,72,9,2,15,3,1,10,19,1,1,1,1,f,16,4,2
