@@ -23,7 +23,7 @@ class CSVPlotter:
 
         # Parse the file path to get the "file name" (64 vs 32 bits) and remove the .csv extension
         self.filename = os.path.basename(self.file_path)
-        self.name_only = self.filename[:-4]
+        self.name_only = self.filename[:-8]
 
         # Retrieves the individual rows and put them into dedicated lists
         self.instructionRow = readCSV[0]
