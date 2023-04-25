@@ -1,0 +1,2 @@
+jalr,add,sltu,andi,addi,sd,ld,srli,sub,bne,addw,auipc,jal,lw,addiw,sw,lui,bltu,slli
+57,1,1,1,166,10,10,1,1,3,4,50,6,22,14,16,27,1,2

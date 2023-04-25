@@ -1,0 +1,2 @@
+slli,auipc,add,srli,srai,bne,addi,jalr,jal,bge,sw,lw,lui,blt
+10,22,12,1,1,5,100,29,9,5,43,69,26,3

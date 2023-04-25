@@ -1,0 +1,2 @@
+sd,ld,blt,addiw,bne,sw,auipc,slli,addi,lui,add,jal,jalr,lw
+19,20,2,2,2,8,18,1,94,24,1,1,27,10

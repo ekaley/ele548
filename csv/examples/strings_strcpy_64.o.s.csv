@@ -1,0 +1,2 @@
+auipc,ld,sw,lbu,lw,sb,jalr,addi,sd,lui
+10,3,2,5,1,6,11,53,3,9

@@ -1,0 +1,2 @@
+addi,sw,lui,sh,sb,auipc,jalr,lw
+35,30,9,2,2,6,7,11

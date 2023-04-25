@@ -1,0 +1,2 @@
+bge,lw,jal,slli,lui,auipc,add,bne,addi,sw,jalr
+4,39,4,8,43,37,8,2,129,27,43

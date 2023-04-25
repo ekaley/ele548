@@ -1,0 +1,2 @@
+add,bge,bne,addi,lw,jal,auipc,slli,sw,jalr,lui
+2,2,2,91,34,2,23,2,30,29,18

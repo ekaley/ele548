@@ -1,0 +1,2 @@
+bne,addi,sw,lw,jalr,auipc,lui
+2,484,39,84,180,168,78

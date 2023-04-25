@@ -12,11 +12,11 @@ import (
 )
 
 var OUTPUTDIR string = "csv/examples"
-var SRCDIR string = "out/examples"
+var SRCDIR string = "asm/examples"
 
 type Parser struct {
 	OutputDir string
-	Files []string
+	Files     []string
 }
 
 func main() {
@@ -25,40 +25,46 @@ func main() {
 		log.Fatal(err)
 	}
 
-	fileNames := make([]string, len(files))
+	fileNames := make([]string, 0)
 	for _, file := range files {
 		fmt.Println(file.Name())
-		file.
-		fileNames = append(fileNames, file)
+		fileNames = append(fileNames, file.Name())
 	}
-
 
 	parser := &Parser{
 		OutputDir: OUTPUTDIR,
-	}
-	// open file for reading
-	// read line by line
-	lines, err := readLines("asm/test_64.o.s")
-	if err != nil {
-		log.Fatalf("readLines: %s", err)
-	}
-	// // print file contents
-	// for i, line := range lines {
-	// 	fmt.Println(i, line)
-	// }
-	instr, err := parseInstructions(lines)
-	if err != nil {
-		panic(err)
-	}
-	
-	err = csvWriter(instr)
-	if err != nil {
-		panic(err)
+		Files:     fileNames,
 	}
 
-	err = plotting(instr)
-	if err != nil {
-		panic(err)
+	// Loop time
+
+	for _, f := range parser.Files {
+		// open file for reading
+		// read line by line
+		fmt.Println(SRCDIR + "/" + f)
+		lines, err := readLines(SRCDIR + "/" + f)
+		if err != nil {
+			log.Fatalf("readLines: %s\n", err)
+		}
+		// // print file contents
+		// for i, line := range lines {
+		// 	fmt.Println(i, line)
+		// }
+		instr, err := parseInstructions(lines)
+		if err != nil {
+			log.Fatalf("Error parsing: %s\n", err)
+		}
+
+		err = csvWriter(f, instr)
+		if err != nil {
+			log.Fatalf("Error writing csv: %s\n", err)
+		}
+
+		// err = plotting(instr)
+		// if err != nil {
+		// 	log.Fatalf("Error plotting: %s\n", err)
+		// }
+
 	}
 }
 
@@ -101,12 +107,10 @@ func parseInstructions(lines []string) (map[string]int, error) {
 
 	}
 
-	log.Printf("instructions %+v\n", instructions)
-
 	return instructions, nil
 }
 
-func csvWriter(instructions map[string]int) error {
+func csvWriter(fileName string, instructions map[string]int) error {
 	// vals := [][]string{
 	// 	{"addi", "xor", "slli"},
 	// 	{"5", "114", "34"},
@@ -120,7 +124,7 @@ func csvWriter(instructions map[string]int) error {
 	}
 	vals = append(vals, instrs, instrFreq)
 
-	f, err := os.Create("test_64g.csv")
+	f, err := os.Create(OUTPUTDIR + "/" + fileName + ".csv")
 	if err != nil {
 		return err
 	}

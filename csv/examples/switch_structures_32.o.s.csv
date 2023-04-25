@@ -1,0 +1,2 @@
+bne,addi,jalr,lui,bltu,slli,sltu,andi,sw,lw,auipc,jal,add
+3,160,57,27,1,1,1,1,26,32,50,6,5

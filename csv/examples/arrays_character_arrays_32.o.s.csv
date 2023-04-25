@@ -1,0 +1,2 @@
+lw,lui,sltiu,jal,lbu,andi,addi,add,bne,sw,jalr,auipc,beq,xori
+35,16,1,2,2,1,67,4,4,24,20,13,1,1

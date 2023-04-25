@@ -1,0 +1,2 @@
+addiw,slt,addi,sd,sw,jalr,lui,auipc,andi,ld,lw,xori,bne
+4,1,36,7,5,9,8,5,1,7,5,1,3

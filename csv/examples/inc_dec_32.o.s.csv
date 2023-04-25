@@ -1,0 +1,2 @@
+addi,sw,lw,jalr,lui,auipc,bne
+57,14,16,20,19,16,2

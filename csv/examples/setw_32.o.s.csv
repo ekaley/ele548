@@ -1,0 +1,2 @@
+lw,jalr,lui,auipc,bne,addi,sw
+22,22,9,15,2,75,21

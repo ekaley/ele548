@@ -1,0 +1,2 @@
+auipc,beq,jal,xori,addi,jalr,lui,bne,sltiu,andi,sw,lw,add
+26,2,3,1,106,33,19,4,1,1,23,36,3

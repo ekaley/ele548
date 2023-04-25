@@ -1,0 +1,2 @@
+lui,auipc,bne,addi,sw,lw,jalr
+11,7,2,39,11,9,11

@@ -1,0 +1,2 @@
+bltu,addi,sw,jalr,auipc,bge,bne,lw,lui,blt,jal,beq
+1,77,14,21,17,2,2,11,27,6,11,4

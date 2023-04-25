@@ -1,0 +1,2 @@
+sw,auipc,fsw,lw,bltu,sd,ld,beq,jal,bne,addiw,addi,jalr,flw,fsgnj.s,srli,slli,lui
+6,13,1,5,1,9,14,1,1,2,2,53,17,2,1,1,1,13

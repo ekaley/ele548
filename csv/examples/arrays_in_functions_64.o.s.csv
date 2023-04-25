@@ -1,0 +1,2 @@
+ld,bge,slliw,blt,addiw,bne,sw,jalr,lui,jal,add,addi,sd,lw,auipc,slli
+15,2,2,1,10,2,15,37,36,3,4,117,14,23,31,4

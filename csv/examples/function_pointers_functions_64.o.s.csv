@@ -1,0 +1,2 @@
+addi,lui,auipc,slt,bne,sd,jal,beq,addiw,andi,ld,lw,slli,add,blt,sw,jalr
+114,20,18,2,2,23,3,1,17,2,28,30,7,7,3,21,29
