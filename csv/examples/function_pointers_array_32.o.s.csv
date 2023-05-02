@@ -1,2 +1,2 @@
-lw,blt,slli,jal,addi,sw,jalr,lui,auipc,add,bne
-30,2,1,1,81,27,27,24,18,1,2
+sw,lw,blt,slli,add,jal,bne,addi,lui,auipc,jalr
+27,30,2,1,1,1,2,81,24,18,27

@@ -23,6 +23,9 @@ ASM_FILES := $(notdir $(patsubst %.cpp, %.s, $(SRC_FILES)))
 # .PHONY: asm
 # asm:
 
+.PHONY: go-build
+go-build:
+	go build -o parse main.go
 
 .PHONY: clean
 clean:

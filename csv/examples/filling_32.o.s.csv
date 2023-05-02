@@ -1,2 +1,2 @@
-auipc,beq,jal,xori,addi,jalr,lui,bne,sltiu,andi,sw,lw,add
-26,2,3,1,106,33,19,4,1,1,23,36,3
+lui,sltiu,xori,add,addi,sw,lw,jalr,auipc,beq,jal,bne,andi
+19,1,1,3,106,23,36,33,26,2,3,4,1

@@ -1,2 +1,2 @@
-lui,lw,blt,subw,addi,auipc,jal,remw,add,addw,sraiw,jalr,addiw,slli,bge,srliw,sd,sw,ld,bne
-26,65,3,1,114,23,11,1,13,2,1,30,30,13,5,1,15,31,26,8
+auipc,bne,addw,addi,jalr,lui,bge,srliw,ld,slli,add,remw,blt,sd,addiw,jal,sraiw,sw,lw,subw
+23,8,2,114,30,26,5,1,26,13,13,1,3,15,30,11,1,31,65,1

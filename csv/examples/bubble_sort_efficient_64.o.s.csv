@@ -1,2 +1,2 @@
-xori,andi,addi,bge,auipc,blt,lw,slli,add,addiw,subw,sb,jal,ld,jalr,lui,lbu,bne,sd,sw
-1,1,90,1,15,3,28,7,7,12,1,2,4,24,23,17,1,4,19,17
+jal,bge,addiw,xori,bne,addi,auipc,lw,slli,blt,lbu,andi,jalr,lui,sb,add,subw,sd,sw,ld
+4,1,12,1,4,90,15,28,7,3,1,1,23,17,2,7,1,19,17,24

@@ -1,2 +1,2 @@
-sw,ld,jalr,lui,auipc,addi,sd,lw,addiw,bne
-8,13,32,28,27,92,10,10,4,2
+ld,auipc,addiw,jalr,lui,lw,bne,addi,sd,sw
+13,27,4,32,28,10,2,92,10,8

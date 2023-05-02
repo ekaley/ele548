@@ -1,2 +1,2 @@
-bge,sd,ld,jal,lw,add,auipc,jalr,addiw,addi,lui,sw,slli
-1,12,19,1,7,5,7,10,2,31,3,4,5
+addi,sw,jal,lw,slli,auipc,addiw,bge,sd,lui,ld,add,jalr
+31,4,1,7,5,7,2,1,12,3,19,5,10

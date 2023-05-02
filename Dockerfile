@@ -1,10 +1,11 @@
-FROM --platform=linux/amd64 ubuntu:jammy
+FROM --platform=linux/amd64 golang:1.20-bullseye
 
 RUN set -eux; \
     apt update \
-    && apt install -y gcc bash make vim wget xz-utils locales \
-    && locale-gen en_US.UTF-8 \
-    && update-locale LANG=en_US.UTF-8 \
+    && apt install -y gcc bash make vim wget xz-utils \
+    # locales \
+    # && locale-gen en_US.UTF-8 \
+    # && update-locale LANG=en_US.UTF-8 \
     && rm -rf /var/lib/apt/lists/* \
     # install asm-parser
     && wget -O /tmp/asm-parser.tar.xz https://github.com/compiler-explorer/asm-parser/releases/download/v0.9/asm-parser.tar.xz \

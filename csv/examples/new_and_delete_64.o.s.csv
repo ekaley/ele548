@@ -1,2 +1,2 @@
-sw,auipc,fsw,lw,bltu,sd,ld,beq,jal,bne,addiw,addi,jalr,flw,fsgnj.s,srli,slli,lui
-6,13,1,5,1,9,14,1,1,2,2,53,17,2,1,1,1,13
+auipc,lw,beq,jal,addi,flw,fsw,slli,lui,ld,jalr,fsgnj.s,bltu,bne,sw,srli,addiw,sd
+13,5,1,1,53,2,1,1,13,14,17,1,1,2,6,1,2,9

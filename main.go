@@ -7,8 +7,6 @@ import (
 	"log"
 	"os"
 	"strings"
-
-	"github.com/wcharczuk/go-chart/v2"
 )
 
 var OUTPUTDIR string = "csv/examples"
@@ -133,45 +131,45 @@ func csvWriter(fileName string, instructions map[string]int) error {
 	return w.WriteAll(vals)
 }
 
-func plotting(instructions map[string]int) error {
-	vals := []chart.Value{}
-	for k, v := range instructions {
-		vals = append(vals, chart.Value{
-			Label: k,
-			Value: float64(v),
-		})
-	}
+// func plotting(instructions map[string]int) error {
+// 	vals := []chart.Value{}
+// 	for k, v := range instructions {
+// 		vals = append(vals, chart.Value{
+// 			Label: k,
+// 			Value: float64(v),
+// 		})
+// 	}
 
-	pie := chart.PieChart{
-		Width:  2048,
-		Height: 2048,
-		Values: vals,
-	}
+// 	pie := chart.PieChart{
+// 		Width:  2048,
+// 		Height: 2048,
+// 		Values: vals,
+// 	}
 
-	p, _ := os.Create("output-pie.png")
-	defer p.Close()
-	err := pie.Render(chart.PNG, p)
-	if err != nil {
-		return err
-	}
+// 	p, _ := os.Create("output-pie.png")
+// 	defer p.Close()
+// 	err := pie.Render(chart.PNG, p)
+// 	if err != nil {
+// 		return err
+// 	}
 
-	graph := chart.BarChart{
-		Title: "Instr riscv64 ISA",
-		Background: chart.Style{
-			Padding: chart.Box{
-				Top: 40,
-			},
-		},
-		Height:   512,
-		BarWidth: 60,
-		Bars:     vals,
-	}
+// 	graph := chart.BarChart{
+// 		Title: "Instr riscv64 ISA",
+// 		Background: chart.Style{
+// 			Padding: chart.Box{
+// 				Top: 40,
+// 			},
+// 		},
+// 		Height:   512,
+// 		BarWidth: 60,
+// 		Bars:     vals,
+// 	}
 
-	b, _ := os.Create("output-bar.png")
-	defer b.Close()
-	err = graph.Render(chart.PNG, b)
-	if err != nil {
-		return err
-	}
-	return nil
-}
+// 	b, _ := os.Create("output-bar.png")
+// 	defer b.Close()
+// 	err = graph.Render(chart.PNG, b)
+// 	if err != nil {
+// 		return err
+// 	}
+// 	return nil
+// }

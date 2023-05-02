@@ -1,2 +1,2 @@
-sw,lw,beq,addi,bge,auipc,srli,jal,lui,srai,bne,blt,add,slli,jalr
-43,68,1,130,5,35,1,10,28,1,4,3,7,7,43
+bge,lw,lui,auipc,addi,sw,jalr,jal,add,srli,blt,slli,beq,srai,bne
+5,68,28,35,130,43,43,10,7,1,3,7,1,1,4

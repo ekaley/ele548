@@ -1,2 +1,2 @@
-addi,lui,lhu,sh,jalr,sd,lw,sw,lbu,sb,auipc,ld
-33,7,2,2,7,6,3,16,2,18,6,6
+addi,lw,sh,sb,ld,sd,lui,sw,lhu,lbu,auipc,jalr
+33,3,2,18,6,6,7,16,2,2,6,7

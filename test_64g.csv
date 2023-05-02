@@ -1,2 +1,0 @@
-addiw,addi,fsw,fsd,mul,lw,srli,sub,sd,sw,ld,auipc,jal,blt,subw,bne,jalr,or,add,mulhu,beq,lui,flw,fld,slli
-20,109,1,1,12,41,10,1,38,20,39,21,12,6,2,2,26,3,14,2,6,31,2,2,15

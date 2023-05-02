@@ -1,2 +1,2 @@
-auipc,jalr,ld,addi,sd,lui,sw,lw
-2,3,4,16,3,7,2,4
+addi,sd,lui,sw,lw,auipc,jalr,ld
+16,3,7,2,4,2,3,4

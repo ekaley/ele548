@@ -1,2 +1,2 @@
-lui,addiw,bne,sw,auipc,fmv.x.d,fsgnj.d,ld,jalr,lw,fmv.d.x,addi,sd,fcvt.d.w
-9,2,2,7,13,1,4,12,20,8,1,68,12,2
+auipc,fsgnj.d,ld,jalr,fmv.d.x,addiw,fcvt.d.w,sw,lw,fmv.x.d,bne,lui,addi,sd
+13,4,12,20,1,2,2,7,8,1,2,9,68,12

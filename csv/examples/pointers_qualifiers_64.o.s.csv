@@ -1,2 +1,2 @@
-addi,addiw,lw,bne,sd,sw,ld,jalr,lui,auipc
-75,2,7,2,11,7,10,21,19,17
+sw,ld,lui,lw,bne,addi,sd,jalr,auipc,addiw
+7,10,19,7,2,75,11,21,17,2

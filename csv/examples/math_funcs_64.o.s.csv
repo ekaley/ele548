@@ -1,2 +1,2 @@
-fmv.d.x,ld,sw,lui,fld,addiw,fsd,sd,fsgnj.d,bne,fcvt.d.w,lw,jalr,auipc,fmv.x.d,addi
-7,23,14,78,6,2,1,23,26,2,7,49,173,161,7,441
+lui,fld,fcvt.d.w,jalr,lw,auipc,fsgnj.d,fmv.x.d,bne,fsd,addi,sw,ld,sd,fmv.d.x,addiw
+78,6,7,173,49,161,26,7,2,1,441,14,23,23,7,2

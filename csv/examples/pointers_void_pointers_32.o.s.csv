@@ -1,2 +1,2 @@
-jalr,auipc,bne,lw,sw,sb,lui,lbu,addi
-13,9,2,17,16,1,13,1,46
+lui,auipc,bne,sw,jalr,sb,lbu,addi,lw
+13,9,2,16,13,1,1,46,17
