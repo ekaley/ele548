@@ -23,7 +23,7 @@ Python script CSV_Plotter
 Python version is 3.7
 Developed in PyCharm IDE v2020.3.5
 
-Libraries used: matplotlib, csv, easygui, and tkinter
+Libraries used: refer to the document "requirements.txt" in the repository.
 
 CSV_Plotter is an ancillary program that reads specific CSV files generated from the “main program”. The script parses the rows into individual libraries and then plots the data from the rows. 
 
