@@ -2,7 +2,7 @@ FROM --platform=linux/amd64 golang:1.20-bullseye
 
 RUN set -eux; \
     apt update \
-    && apt install -y gcc bash make vim wget xz-utils \
+    && apt install -y gcc bash make vim wget xz-utils python3 python3-pip \
     # locales \
     # && locale-gen en_US.UTF-8 \
     # && update-locale LANG=en_US.UTF-8 \
