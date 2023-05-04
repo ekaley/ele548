@@ -2,6 +2,7 @@
 REPORT: https://github.com/ekaley/ele548/blob/main/kaley_ethan_dionisopoulos_david_ele548_final.pdf
 
 `$ git clone https://github.com/ekaley/ele548.git`
+
 `$ cd ele548`
 
 Pre Requisites:
