@@ -20,8 +20,11 @@ ASM_FILES := $(notdir $(patsubst %.cpp, %.s, $(SRC_FILES)))
 # $(OBJ_FILES): $(SRC_FILES) | $(OUT_DIR)
 # 	$(CXX_RISCV) $(CXXFLAGS) -c $^ && mv *.o $(OUT_DIR)/
 
-# .PHONY: asm
-# asm:
+.PHONY: run
+run:
+	./build.sh
+	./parse.sh
+	./parse
 
 .PHONY: go-build
 go-build:

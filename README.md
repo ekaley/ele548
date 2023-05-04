@@ -1,18 +1,31 @@
-# ele548
+# URI ele548 Final Project
 
-Notes from meeting:
+`git clone https://github.com/ekaley/ele548.git`
 
-operand width 8 bit or 16 bit data...
+Pre Requisites:
 
-If we know the data width... if its never more tha 16 width i can use
+docker or a container runtime equivalent (https://www.docker.com)
 
-when we compile we want to minimize the amount of instructions... minimize instructions so look at compile flags for minimizing to standard instructions not extended
+The following command will build the `Dockerfile` locally
 
-https://github.com/sinairv/Cpp-Tutorial-Samples
+`$ make docker-build`
 
-https://github.com/riscv-non-isa/riscv-toolchain-conventions/blob/master/README.mkd
+The following command will run the docker image `asm-compiler:latest` and drop you into a shell
 
-https://github.com/riscv-non-isa/riscv-elf-psabi-doc/blob/master/riscv-cc.adoc
+`$ make docker-run`
+
+Once you are in the container shell the following command will:
+- Compile everything within the `src` dir and place in `out` dir
+- Disassemble all compiled object files in `out` dir and place asm (.s) files in the `asm` dir
+- Run the parser to generate the csv data files and place in the `csv` dir
+
+`$ make run`
+
+From here the entire github repository source directory is volume mounted in locally so any edits on the host
+or inside the container working directory are shared across the container context.
+
+
+
 
 
 
@@ -25,7 +38,7 @@ Developed in PyCharm IDE v2020.3.5
 
 Libraries used: refer to the document "requirements.txt" in the repository.
 
-CSV_Plotter is an ancillary program that reads specific CSV files generated from the “main program”. The script parses the rows into individual libraries and then plots the data from the rows. 
+CSV_Plotter is an ancillary program that reads specific CSV files generated from the “parse” program. The script parses the rows into individual libraries and then plots the data from the rows. 
 
 
 Run the script with any terminal or IDE. Upon running, a file explorer window will display. Navigate to the first CSV file. Shortly after the plot will show up for that file. The file explorer will display again. Select the second file. That will generate a second plot.
@@ -45,4 +58,13 @@ It's hardcoded for 2 plots to compare the differences between RISC-V 32i and RSI
 
 then at the bottom of the script at the following line
 root#.mainloop()
+
+
+## References
+
+https://github.com/sinairv/Cpp-Tutorial-Samples
+
+https://github.com/riscv-non-isa/riscv-toolchain-conventions/blob/master/README.mkd
+
+https://github.com/riscv-non-isa/riscv-elf-psabi-doc/blob/master/riscv-cc.adoc
 
