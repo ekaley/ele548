@@ -29,9 +29,6 @@ or inside the container working directory are shared across the container contex
 
 
 
-
-
-
 # Below is CSV_Plotter README
 
 Python script CSV_Plotter
@@ -41,7 +38,7 @@ Developed in PyCharm IDE v2020.3.5
 
 Libraries used: refer to the document "requirements.txt" in the repository.
 
-CSV_Plotter is an ancillary program that reads specific CSV files generated from the “main program”. The script parses the rows into individual libraries and then plots the data from the rows. 
+CSV_Plotter is an ancillary program that reads specific CSV files generated from the “parse” program. The script parses the rows into individual libraries and then plots the data from the rows. 
 
 
 Run the script with any terminal or IDE. Upon running, a file explorer window will display. Navigate to the first CSV file. Shortly after the plot will show up for that file. The file explorer will display again. Select the second file. That will generate a second plot.
