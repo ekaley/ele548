@@ -1,6 +1,29 @@
 # URI ele548 Final Project
 
-`git clone URL`
+`git clone https://github.com/ekaley/ele548.git`
+
+Pre Requisites:
+
+docker or a container runtime equivalent (https://www.docker.com)
+
+The following command will build the `Dockerfile` locally
+
+`$ make docker-build`
+
+The following command will run the docker image `asm-compiler:latest` and drop you into a shell
+
+`$ make docker-run`
+
+Once you are in the container shell the following command will:
+- Compile everything within the `src` dir and place in `out` dir
+- Disassemble all compiled object files in `out` dir and place asm (.s) files in the `asm` dir
+- Run the parser to generate the csv data files and place in the `csv` dir
+
+`$ make run`
+
+From here the entire github repository source directory is volume mounted in locally so any edits on the host
+or inside the container working directory are shared across the container context.
+
 
 
 
